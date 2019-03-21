@@ -4,7 +4,7 @@
 	if (is_logged_in())
 		header("Location: books.php");
 	
-	if ( $_SERVER['REQUEST_METHOD'] == "POST" ){
+	if ( $_SERVER['REQUEST_METHOD'] == "GET" ){
 		//pr($_POST);
 		// form was submitted
 		
@@ -46,9 +46,7 @@
 					}
 					
 					//save session and TODO cookie
-					$_SESSION['u_id'] = $results['id'];
-					$_SESSION['u_name'] = $results['name'];
-					$_SESSION['u_type'] = $results['type'];
+					
 					 
 					//redirect user on successful login
 					header("Location: books.php");
@@ -79,6 +77,7 @@
 	</head>
 	<body>
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+			THis form is cool
   <div class="container">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" >
