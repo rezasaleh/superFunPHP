@@ -1,5 +1,5 @@
 <?php 
-	require ("includes/functions.php");
+	require ("functions.php");
 
 	// select the books from our DB
 	// loop and display in the table
